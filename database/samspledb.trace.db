@@ -1,0 +1,3 @@
+2019-11-17 02:22:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DOCTOR" already exists; SQL statement:
+CREATE TABLE doctor ( id INT NOT NULL, name VARCHAR(50) NOT NULL, hospital_id VARCHAR(50) NOT NULL, type VARCHAR(50) NOT NULL, date_available VARCHAR(150) NOT NULL, time_available VARCHAR(50) NOT NULL, rate INT NOT NULL, status VARCHAR(50) NOT NULL, created_at DATE ) [42101-200]
