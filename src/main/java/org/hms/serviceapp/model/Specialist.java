@@ -8,7 +8,7 @@ import org.hms.serviceapp.entity.Doctor;
 public class Specialist {
 	private String name;
 	private String type;
-	private String hospotalId;
+	private String hospitalId;
 	private String availableDay;
 	private String availableTime;
 	private Boolean isAvailable;
@@ -25,7 +25,7 @@ public class Specialist {
 	public Specialist(Doctor doctor) {
 		this.name = doctor.getName();
 		this.type = doctor.getType();
-		this.hospotalId = doctor.getHospitalId();
+		this.hospitalId = doctor.getHospitalId();
 		this.availableDay = doctor.getDateAvailable();
 		this.availableTime = doctor.getTimeAvailable();
 		this.isAvailable = doctor.getStatus().equalsIgnoreCase("Y")?true:false;
@@ -57,14 +57,14 @@ public class Specialist {
 	/**
 	 * @return the hospotalId
 	 */
-	public String getHospotalId() {
-		return hospotalId;
+	public String getHospitalId() {
+		return hospitalId;
 	}
 	/**
 	 * @param hospotalId the hospotalId to set
 	 */
-	public void setHospotalId(String hospotalId) {
-		this.hospotalId = hospotalId;
+	public void setHospitalId(String hospitalId) {
+		this.hospitalId = hospitalId;
 	}
 	/**
 	 * @return the availableDay

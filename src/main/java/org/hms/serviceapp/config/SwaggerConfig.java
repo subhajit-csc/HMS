@@ -35,7 +35,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("org.hms.serviceapp.controller"))
-                .paths(regex("/api.*"))
+                .paths(regex("/hms.*"))
                 .build()
                 .pathMapping("/")				
 				.securitySchemes(Arrays.asList(apiKey()))
@@ -59,12 +59,8 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
    
     private ApiInfo metaData() {
         return new ApiInfoBuilder()
-                .title("Spring Boot REST API")
-                .description("\"Spring Boot REST API for Online Store\"")
+                .title("HMS Application")
                 .version("1.0.0")
-                .license("Apache License Version 2.0")
-                .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
-                .contact(new Contact("Subha", "https://springframework.com/about/", "subhajit.csc@gmail.com"))
                 .build();
     }
     @Override

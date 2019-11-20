@@ -4,6 +4,9 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.springframework.stereotype.Component;
+
+@Component
 @XmlRootElement
 public class SpecialistDetails {
 	

@@ -19,13 +19,18 @@ public class Doctor {
 
 	private long id;
 	private String name;
+	@Column(name="hospital_id")
 	private String hospitalId;
+	@Column(name="type")
 	private String type;	
 	private String dateAvailable;
 	private String timeAvailable;
 	private Integer rate;
 	private String status;
-	private Date createdAt;
+	private Date createdOn;
+	private String createdBy;
+	private Date modifiedOn;
+	private String modifiedBy;
 	
 	/**
 	 * @return the id
@@ -126,19 +131,42 @@ public class Doctor {
 		this.status = status;
 	}
 	/**
-	 * @return the createdAt
+	 * @return the createdOn
 	 */
-	@Column(name = "created_at", nullable = false)
+	@Column(name = "created_on")
 	@CreatedDate
 	@Temporal(TemporalType.TIMESTAMP)
-	public Date getCreatedAt() {
-		return createdAt;
+	public Date getCreatedOn() {
+		return createdOn;
 	}
 	/**
-	 * @param createdAt the createdAt to set
+	 * @param createdOn the createdOn to set
 	 */
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
+	public void setCreatedOn(Date createdOn) {
+		this.createdOn = createdOn;
+	}
+	public String getCreatedBy() {
+		return createdBy;
+	}
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+	@Column(name = "modified_on")
+	@CreatedDate
+	@Temporal(TemporalType.TIMESTAMP)
+	public Date getModifiedOn() {
+		return modifiedOn;
+	}
+	public void setModifiedOn(Date modifiedOn) {
+		this.modifiedOn = modifiedOn;
+	}
+	public String getModifiedBy() {
+		return modifiedBy;
+	}
+	public void setModifiedBy(String modifiedBy) {
+		this.modifiedBy = modifiedBy;
 	}	
+	
+	
 	
 }
