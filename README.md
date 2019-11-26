@@ -10,3 +10,6 @@ http://localhost:8001/hmservice/hms/appointmentDetails?appointmentDay=monday&pat
 Bed details url with sample data
 
 http://localhost:8001/hmservice/hms/bedDetails?hospitalName=XYZ
+
+Info Actuator Endpoint
+http://localhost:8001/hmservice/actuator/info
